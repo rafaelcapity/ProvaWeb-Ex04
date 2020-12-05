@@ -1,0 +1,25 @@
+﻿@model ProvaWeb_Ex04.Models.Encriptar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Encriptar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Txt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar para Lista", "Index")
+</p>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ProvaWeb_Ex04.Models.Encriptar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table">
+    <tr>       
+        <th>
+            @Html.DisplayNameFor(model => model.Txt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Txt)
+        </td>
+        <td>           
+            @Html.ActionLink("Decriptar", "Details", new { id=item.MyProperty }) |           
+        </td>
+    </tr>
+}
+
+</table>
